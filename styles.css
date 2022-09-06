@@ -1,0 +1,338 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap');
+
+/* custom variables */
+:root {
+  /* colors */
+  --clr-pink: hsl(322, 100%, 66%);
+  --clr-pale-cyan: hsl(193, 100%, 96%);
+  --clr-dark-cyan: hsl(192, 100%, 9%);
+  --clr-grayish-blue: hsl(208, 11%, 55%);
+
+  /* font families */
+  --ff-heading: 'Poppins', sans-serif;
+  --ff-body: 'Open Sans', sans-serif;
+
+  /* font sizes */
+  --fs-body: 1.8rem;
+
+  /* font weights */
+  --fw-body: 400;
+  --fw-heading: 600;
+  --fw-cta: 700;
+}
+
+/* reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* sets the default size to 10px */
+  font-size: 62.5%;
+}
+
+/* global styles */
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-body);
+  color: var(--clr-grayish-blue);
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.btn {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-cta);
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 10rem;
+}
+
+.btn--pink {
+  color: #fff;
+  background-color: var(--clr-pink);
+  padding: 1em 5em;
+}
+
+.btn--pink:focus {
+  background-color: hsl(322, 100%, 79%);
+}
+
+/* header */
+.main-header {
+  background-image: url(images/bg-hero-mobile.svg);
+  background-color: var(--clr-pale-cyan);
+  background-position: center;
+  background-size: cover;
+  padding: 3.5rem 0;
+}
+
+/* primary header */
+.main-header__primary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header__primary .logo {
+  height: 3rem;
+}
+
+.main-header__primary .btn--white {
+  color: black;
+  background-color: white;
+  padding: 0.5em 2.5em;
+}
+
+.main-header__primary .btn--white:focus {
+  color: rgb(138, 138, 138);
+}
+
+/* secondary header */
+.main-header__secondary {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.main-header__text {
+  margin-top: 12rem;
+  text-align: center;
+}
+
+.main-header__text h1 {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-heading);
+  color: var(--clr-dark-cyan);
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header__text p {
+  color: black;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.main-header__secondary .btn--pink {
+  margin-top: 3rem;
+}
+
+/* desktop */
+@media screen and (min-width: 65em) {
+  .main-header__secondary {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main-header__text {
+    text-align: left;
+  }
+
+  .main-header__text p {
+    text-align: inherit;
+  }
+
+  .main-header__secondary .header-img {
+    margin-top: 5rem;
+    width: 50%;
+    object-fit: contain;
+    height: auto;
+  }
+}
+
+/* main */
+main .two-column-section{
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 5rem;
+  gap: 5rem;
+  border-radius: 25px;
+  box-shadow: 0px 0px 30px 3px rgba(131, 131, 131, 0.15);
+}
+
+main .two-column-section:nth-child(1) {
+  margin-top: 8rem;
+}
+
+main .two-column-section:nth-child(2) {
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+main .two-column-section:nth-child(3) {
+  margin: 3rem 0 14rem 0;
+}
+
+main .two-column-section .section-img {
+  width: 85%;
+  height: auto;
+  margin: 0 auto;
+}
+
+main .two-column-section article {
+  text-align: center;
+}
+
+main .two-column-section article h2 {
+  font-family: var(--ff-heading);
+  font-size: 2.5rem;
+  font-weight: var(--fw-heading);
+  color: var(--clr-dark-cyan);
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 65em) {
+  main .two-column-section{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+  }
+
+  main .two-column-section:nth-child(2){
+    flex-direction: row;
+  }
+
+  main .two-column-section .section-img {
+    width: 50%;
+  }
+
+  main .two-column-section article {
+    text-align: left;
+  }
+}
+
+/* call to action section */
+main .cta {
+  text-align: center;
+  border-radius: 25px;
+  box-shadow: 0px 0px 30px 1px rgba(105, 105, 105, 0.15);
+  width: 90%;
+  margin: 0 auto;
+  padding: 5rem 0;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+main .cta h2 {
+  font-family: var(--ff-heading);
+  font-size: 2.5rem;
+  font-weight: var(--fw-heading);
+  color: var(--clr-dark-cyan);
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 65em) {
+  main .cta {
+    width: 60%;
+  }
+}
+
+/* footer */
+.main-footer {
+  background-color: var(--clr-dark-cyan);
+  padding: 17.5rem 0 5rem 0;
+  margin: -10rem 0;
+  position: relative;
+  z-index: 0;
+}
+
+.main-footer__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-footer__content .contact {
+  margin-bottom: 4rem;
+}
+
+.main-footer__content .contact-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.main-footer__content .contact-info p {
+  color: #fff;
+}
+
+.main-footer__content .options {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-footer__content .options a {
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 1.5rem;
+}
+
+.main-footer__content .options a:focus {
+  text-decoration: underline;
+}
+
+.main-footer__content .social-icons {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.main-footer__content .social-icons a {
+  color: #fff;
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.main-footer__content .social-icons a:focus {
+  color: var(--clr-pink);
+  border: 1px solid var(--clr-pink);
+}
+
+.main-footer .copyrights {
+  text-align: center;
+  color: #fff;
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 65em) {
+  .main-footer__content {
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+    align-items: baseline;
+    gap: 10rem;
+  }
+
+  .main-footer__content > * {
+    flex-basis: 25%;
+  }
+
+  .main-footer__content .contact {
+    flex-basis: 40%;
+    margin-bottom: 0;
+  }
+
+  .main-footer__content .social-icons {
+    flex-basis: 45%;
+  }
+
+  .main-footer .copyrights {
+    margin-top: 0;
+    text-align: right;
+  }
+}
