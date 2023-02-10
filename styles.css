@@ -45,7 +45,7 @@ body {
 }
 
 .container {
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -175,7 +175,7 @@ main .two-column-section:nth-child(3) {
 }
 
 main .two-column-section .section-img {
-  width: 85%;
+  width: 70%;
   height: auto;
   margin: 0 auto;
 }
