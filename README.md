@@ -5,5 +5,5 @@ This is a solution to the [Huddle landing page with alternating feature blocks c
 ## Links:
 Live site: https://challenge-huddle-landing-page.netlify.app/
 ## Built with:
-* HTML
+* HTML5
 * CSS
